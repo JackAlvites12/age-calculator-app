@@ -1,0 +1,190 @@
+:root{
+
+    /* Primary */
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+    user-select: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    /* Weights: 400i, 700, 800i */
+    font-family: 'Poppins', sans-serif;
+    background: var(--light-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    position: relative;
+    width: 90%;
+    max-width: 560px;
+    min-width: 345px;
+    margin: 0 auto;
+    border-radius: 7% 7% 35% 7% / 7% 7% 25% 7%;
+    background: var(--white);
+    
+}
+
+.enter-age{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--light-grey);
+    gap: 20px;
+    padding-bottom: 45px;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+.enter-age__date{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-date{
+    font-size: .7em;
+    letter-spacing: 2px;
+    color: var(--smokey-grey);
+    margin-bottom: 5px;
+}
+
+.input-date {
+    appearance: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.3em;
+    padding-left: 12px;
+    border: 1px solid var(--light-grey);
+    border-radius: 6px;
+    width: 100%;
+    height: 45px;
+    transition: border .8s;
+}
+
+.input-date:focus{
+    outline: none;
+    border: 1px solid var(--purple);
+}
+
+.input-date[type="number"]::-webkit-inner-spin-button,
+.input-date[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.btn-submit{
+    cursor: pointer;
+    position: absolute;
+    top: 26%;
+    left: 25%;
+    right: 25%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 55px;
+    border-radius: 50%;
+    background-color: var(--purple);
+    transition: background .5s;
+    border: none;
+}
+
+.btn-submit:hover{
+    background: #000;
+}
+
+.btn-arrow__svg{
+    width: 24px;
+    height: 55px;
+}
+
+
+
+.content-age{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+
+.calculated-age{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.number-years, .number-months, .number-days{
+    margin-right: 8px;
+    color: var(--purple);
+    font-size: 58px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.title-years, .title-months, .title-days{
+    color: black;
+    font-size: 60px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* Errores */
+
+small{
+    position: absolute;
+    top: 75px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 9px;
+    color: var(--light-red);
+}
+
+.error{
+    outline: 1px solid var(--light-red);
+}
+
+.error-lbl{
+    color: var(--light-red);
+}
+
+.attribution{
+    text-align: center;
+    min-width: 345px;
+    margin: 50px auto 0px auto;
+}
+
+@media (width > 560px){
+
+    .enter-age{
+        justify-content: flex-start;
+        padding-bottom: 15px;
+    }
+    .enter-age__date{
+        width: 115px;
+    }
+
+    .btn-submit{
+        top: 26%;
+        left: 83%;
+    }
+}

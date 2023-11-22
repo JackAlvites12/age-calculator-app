@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  
+  <title>Calculadora de Edad</title>
+
+</head>
+<body>
+
+  <section class="card">
+    <form id="calcularEdad" class="enter-age container">
+        <div class="enter-age__date">
+          <label class="label-date" for="">DÍA</label>
+          <input class="input-date" id="day" type="number" placeholder="DD" autofocus>
+          <small class="errorDay"></small>
+        </div>
+
+        <div class="enter-age__date">
+          <label class="label-date" for="">MES</label>
+          <input class="input-date" id="month" type="number" placeholder="MM" >
+          <small class="errorMonth"></small>
+        </div>
+
+        <div class="enter-age__date">
+          <label class="label-date" for="">AÑO</label>
+          <input class="input-date" id="year" type="number" placeholder="YYYY" >
+          <small class="errorYear"></small>
+        </div>
+
+        <button  class="btn-submit">
+          <svg class="btn-arrow__svg" xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="3"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+        </button>
+    </form>
+
+
+    <div class="content-age container">
+      <div class="calculated-age">
+        <span class="number-years"> - - </span>
+        <h3 class="title-years">años</h3>
+      </div>
+      <div class="calculated-age">
+        <span class="number-months"> - - </span>
+        <h3 class="title-months">meses</h3>
+      </div>
+      <div class="calculated-age">
+        <span class="number-days"> - - </span>
+        <h3 class="title-days">días</h3>
+      </div>
+    </div>
+  </section>
+
+  
+  <div class="attribution">
+    Challenge by <a class="frontend-mentor" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="author" href="https://github.com/JackAlvites12">Jack Manuel Alvites Mejía</a>.
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
